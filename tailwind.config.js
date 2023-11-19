@@ -9,7 +9,10 @@ export default {
         logo: ['Norse-Bold', ...defaultTheme.fontFamily.sans],
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
       },
-      height: '100dvh',
+      height: { screen: '100dvh' },
+      backgroundImage: {
+        'hero-pattern': "url('/images/halie-west-25xggax4bSA-unsplash.jpg')",
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],

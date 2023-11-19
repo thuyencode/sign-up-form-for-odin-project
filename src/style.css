@@ -11,7 +11,7 @@
 
 @layer base {
   form {
-    @apply space-y-5;
+    @apply space-y-8;
   }
 
   legend {
@@ -19,11 +19,11 @@
   }
 
   fieldset {
-    @apply space-x-20;
+    @apply max-md:space-y-5 md:space-x-5 lg:space-x-20;
   }
 
   fieldset > div {
-    @apply inline-flex flex-col gap-1;
+    @apply inline-flex w-full flex-col gap-1 md:w-min;
   }
 
   label {
@@ -33,21 +33,20 @@
   input[type='text'],
   input[type='email'],
   input[type='password'] {
-    @apply rounded py-1;
+    @apply rounded border-gray-300 py-1 invalid:border-red-500;
   }
 
-  input[type='text'],
-  input[type='email'] {
-    @apply border-gray-300;
+  button[type='submit'] {
+    @apply rounded-md bg-[#596D48] px-10 py-3 font-semibold text-white shadow-lg hover:bg-opacity-80 active:bg-opacity-90;
   }
 
-  input[type='password'] {
-    @apply border-red-600;
+  form a {
+    @apply font-semibold text-[#596D48] hover:text-opacity-80 hover:underline active:text-blue-600 active:underline;
   }
 }
 
 @layer components {
   .error {
-    @apply text-xs text-red-600;
+    @apply break-words text-xs text-red-600;
   }
 }

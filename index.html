@@ -7,13 +7,10 @@
     <link rel="stylesheet" href="src/style.css" />
     <title>Vite + TS</title>
   </head>
-  <body class="bg-[#F9FAFB] font-sans">
-    <div class="relative float-left h-screen w-1/3 text-white">
-      <img
-        src="/images/halie-west-25xggax4bSA-unsplash.jpg"
-        alt="green leaf plant in close up photography by Halie West, Ferns in the Washington forest"
-        class="block h-full w-full object-cover"
-      />
+  <body class="bg-[#F9FAFB] font-sans md:overflow-y-hidden">
+    <div
+      class="bg-hero-pattern h-screen w-full bg-cover bg-center text-white max-md:hidden md:relative md:float-left md:w-1/3"
+    >
       <div
         class="absolute inset-x-0 top-40 m-auto inline-flex h-24 w-full items-center justify-center gap-1 bg-black/50"
       >
@@ -40,35 +37,67 @@
       </p>
     </div>
 
-    <div class="float-right w-2/3 space-y-10 py-10">
-      <div class="space-y-5 pl-10 pr-40 text-lg font-semibold">
+    <div class="space-y-10 py-10 md:float-right md:w-2/3">
+      <div class="space-y-5 px-5 text-lg font-semibold lg:pl-10 lg:pr-40">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat
-          voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus.
+          voluptatem.
         </p>
         <p class="italic">Lorem ipsum dolor sit amet.</p>
       </div>
 
       <form>
-        <div class="space-y-5 bg-white py-5 pl-10 shadow-md">
+        <div
+          class="space-y-5 bg-white p-5 shadow-lg sm:px-10 md:pl-5 md:pr-0 lg:pl-10"
+        >
           <legend>Let&apos;s do this!</legend>
           <fieldset>
             <div>
               <label for="first_name">First Name</label>
-              <input type="text" id="first_name" name="first_name" required />
+              <input
+                type="text"
+                class="peer/first_name"
+                id="first_name"
+                name="first_name"
+                value="Thuyen"
+                required
+              />
+              <p class="error hidden peer-invalid/first_name:inline">
+                * First name is empty
+              </p>
             </div>
 
             <div>
               <label for="last_name">Last Name</label>
-              <input type="text" id="last_name" name="last_name" required />
+              <input
+                type="text"
+                class="peer/last_name"
+                id="last_name"
+                name="last_name"
+                value="Code"
+                required
+              />
+              <p class="error hidden peer-invalid/last_name:inline">
+                * Last name is empty
+              </p>
             </div>
           </fieldset>
 
           <fieldset>
             <div>
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
+              <input
+                type="email"
+                class="peer/email"
+                id="email"
+                name="email"
+                value="thuyencode@proton.me"
+                required
+              />
+              <p class="error hidden peer-invalid/email:inline">
+                * Email is empty
+              </p>
             </div>
 
             <div>
@@ -85,8 +114,20 @@
           <fieldset>
             <div>
               <label for="password">Password</label>
-              <input type="password" id="password" name="password" required />
-              <p class="error">* Passwords do not match</p>
+              <input
+                type="password"
+                class="peer/password"
+                id="password"
+                name="password"
+                min="8"
+                value="GuessMyPassw0rd"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                required
+              />
+              <p class="error hidden peer-invalid/password:inline">
+                * Must be at least 8 characters and contains uppercase,
+                lowercase and number
+              </p>
             </div>
 
             <div>
@@ -95,14 +136,21 @@
                 type="password"
                 id="confirm_password"
                 name="confirm_password"
+                min="8"
+                value="GuessMyPassw0rd"
+                pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
                 required
               />
             </div>
           </fieldset>
         </div>
 
-        <button class="ml-10" type="submit">Create Account</button>
-        <p>Already have an account? <a href="#">Log in</a></p>
+        <div
+          class="block flex-col items-center justify-between gap-5 max-md:flex sm:mx-10 sm:flex-row md:ml-5 md:mr-0 md:space-y-5 lg:ml-10"
+        >
+          <button type="submit">Create Account</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
       </form>
     </div>
   </body>
