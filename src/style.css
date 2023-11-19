@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=open-sans:400,600,600i);
+
 @font-face {
   font-family: 'Norse-Bold';
   src: url('/fonts/Norse-Bold.otf') format('opentype');
@@ -6,3 +8,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  form {
+    @apply space-y-5;
+  }
+
+  legend {
+    @apply text-2xl font-semibold;
+  }
+
+  fieldset {
+    @apply space-x-20;
+  }
+
+  fieldset > div {
+    @apply inline-flex flex-col gap-1;
+  }
+
+  label {
+    @apply text-sm font-semibold uppercase;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  input[type='password'] {
+    @apply rounded py-1;
+  }
+
+  input[type='text'],
+  input[type='email'] {
+    @apply border-gray-300;
+  }
+
+  input[type='password'] {
+    @apply border-red-600;
+  }
+}
+
+@layer components {
+  .error {
+    @apply text-xs text-red-600;
+  }
+}

@@ -7,8 +7,10 @@ export default {
     extend: {
       fontFamily: {
         logo: ['Norse-Bold', ...defaultTheme.fontFamily.sans],
+        sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
       },
+      height: '100dvh',
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
