@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages --dist 'dist' --branch 'gh-pages'"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
+    "gh-pages": "^6.1.0",
     "postcss": "^8.4.31",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
