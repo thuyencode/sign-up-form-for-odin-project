@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages --dist 'dist' --branch 'gh-pages'"
   },
@@ -17,7 +17,6 @@
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
     "tailwindcss": "^3.3.5",
-    "typescript": "^5.2.2",
     "vite": "^5.0.0",
     "vite-plugin-html": "^3.2.0"
   }
