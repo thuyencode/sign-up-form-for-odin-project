@@ -11,11 +11,11 @@
 
 @layer base {
   form {
-    @apply space-y-8;
+    @apply space-y-5 max-md:mx-2 max-md:rounded max-md:bg-white max-md:pb-5 md:space-y-8;
   }
 
   legend {
-    @apply text-2xl font-semibold;
+    @apply text-xl font-semibold md:text-2xl;
   }
 
   fieldset {
@@ -27,17 +27,17 @@
   }
 
   label {
-    @apply text-sm font-semibold uppercase;
+    @apply text-xs font-semibold uppercase md:text-sm;
   }
 
   input[type='text'],
   input[type='email'],
   input[type='password'] {
-    @apply rounded border-gray-300 py-1 invalid:border-red-500;
+    @apply rounded border-gray-300 py-1 invalid:border-red-500 max-sm:text-sm;
   }
 
   button[type='submit'] {
-    @apply rounded-md bg-[#596D48] px-10 py-3 font-semibold text-white shadow-lg hover:bg-opacity-80 active:bg-opacity-90;
+    @apply rounded-md bg-[#596D48] px-10 py-3 font-semibold text-white shadow-lg hover:bg-opacity-80 active:bg-opacity-90 max-sm:text-sm;
   }
 
   form a {

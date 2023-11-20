@@ -7,9 +7,22 @@
     <link rel="stylesheet" href="src/style.css" />
     <title>Vite + TS</title>
   </head>
-  <body class="bg-[#F9FAFB] font-sans md:overflow-y-hidden">
+  <body
+    class="bg-[#F9FAFB] bg-cover bg-center font-sans max-md:bg-hero-pattern md:overflow-y-hidden"
+  >
     <div
-      class="bg-hero-pattern h-screen w-full bg-cover bg-center text-white max-md:hidden md:relative md:float-left md:w-1/3"
+      class="inline-flex h-24 w-full items-center justify-center gap-1 bg-black/50 text-white md:hidden"
+    >
+      <img
+        src="/images/odin-lined.png"
+        alt="The Odin Project lined logo"
+        class="h-20 w-auto object-contain"
+      />
+      <p class="font-logo text-6xl uppercase">Odin</p>
+    </div>
+
+    <div
+      class="relative float-left h-screen w-1/3 bg-hero-pattern bg-cover bg-center text-white max-md:hidden"
     >
       <div
         class="absolute inset-x-0 top-40 m-auto inline-flex h-24 w-full items-center justify-center gap-1 bg-black/50"
@@ -21,6 +34,7 @@
         />
         <p class="font-logo text-6xl uppercase">Odin</p>
       </div>
+
       <p class="absolute inset-x-0 bottom-5 m-auto block text-center text-xs">
         Photo by
         <a
@@ -38,7 +52,9 @@
     </div>
 
     <div class="space-y-10 py-10 md:float-right md:w-2/3">
-      <div class="space-y-5 px-5 text-lg font-semibold lg:pl-10 lg:pr-40">
+      <div
+        class="space-y-5 px-5 text-sm font-semibold max-md:text-white sm:text-base md:text-lg lg:pl-10 lg:pr-40"
+      >
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat
@@ -49,7 +65,7 @@
 
       <form>
         <div
-          class="space-y-5 bg-white p-5 shadow-lg sm:px-10 md:pl-5 md:pr-0 lg:pl-10"
+          class="space-y-5 bg-white p-5 max-md:rounded sm:px-10 md:pl-5 md:pr-0 md:shadow-lg lg:pl-10"
         >
           <legend>Let&apos;s do this!</legend>
           <fieldset>
@@ -104,10 +120,14 @@
               <label for="phone_number">Phone Number</label>
               <input
                 type="text"
+                class="peer/phone_number"
                 id="phone_number"
                 name="phone_number"
                 pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"
               />
+              <p class="error hidden peer-invalid/phone_number:inline">
+                * Invalid phone number
+              </p>
             </div>
           </fieldset>
 
@@ -149,9 +169,25 @@
           class="block flex-col items-center justify-between gap-5 max-md:flex sm:mx-10 sm:flex-row md:ml-5 md:mr-0 md:space-y-5 lg:ml-10"
         >
           <button type="submit">Create Account</button>
-          <p>Already have an account? <a href="#">Log in</a></p>
+          <p class="max-sm:text-sm">
+            Already have an account? <a href="#">Log in</a>
+          </p>
         </div>
       </form>
     </div>
+    <p class="mb-10 text-center text-xs text-white md:hidden">
+      Photo by
+      <a
+        href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        class="underline"
+        >Halie West</a
+      >
+      on
+      <a
+        href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+        class="underline"
+        >Unsplash</a
+      >
+    </p>
   </body>
 </html>
